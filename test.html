@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+   <head></head>
+   <body>
+       <script>
+           var xhr = new XMLHttpRequest();
+           xhr.open("GET", "file:///home/timu/workspace/jsdom-xmlhttp-bug/test.html");
+           xhr.onload = function(){
+               console.log(this.response);
+               console.log("XMLHttpRequest doesn't care domains of html/js files")
+           };
+           xhr.send();
+       </script>
+   </body>
+</html>
